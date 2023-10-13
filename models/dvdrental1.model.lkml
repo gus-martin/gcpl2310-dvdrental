@@ -3,7 +3,6 @@ connection: "dvdrental_postgres"
 
 # include all the views
 include: "/views/**/*.view.lkml"
-include: "/derivedtable_dvdrental.view.lkml"
 
 # Datagroups define a caching policy for an Explore. To learn more,
 # use the Quick Help panel on the right to see documentation.
@@ -37,6 +36,8 @@ explore: actor_info {
 }
 
 explore: derivedtable_dvdrental{}
+
+explore: dvdrentalderived2{}
 
 explore: address {
   join: city {
