@@ -36,6 +36,8 @@ explore: actor_info {
   }
 }
 
+explore: derivedtable_dvdrental{}
+
 explore: address {
   join: city {
     type: left_outer
