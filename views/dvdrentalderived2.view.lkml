@@ -3,7 +3,7 @@
 
 view: dvdrentalderived2 {
   derived_table: {
-    interval_trigger: "5 minutes"
+    interval_trigger: "15 minutes"
     indexes: ["actor_id","film_id"]
     explore_source: film_actor {
       column: first_name { field: actor.first_name }
