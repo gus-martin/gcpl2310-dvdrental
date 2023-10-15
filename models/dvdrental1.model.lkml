@@ -9,7 +9,7 @@ include: "/views/**/*.view.lkml"
 
 datagroup: dvdrental1_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  max_cache_age: "5 minutes"
 }
 
 persist_with: dvdrental1_default_datagroup

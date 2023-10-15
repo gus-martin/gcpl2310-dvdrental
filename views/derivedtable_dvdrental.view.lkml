@@ -1,4 +1,4 @@
-# If necessary, uncomment the line below to include explore_source.
+# If necessary, uncomment the line below to include explore_source..
  include: "/models/dvdrental1.model.lkml"
 
 view: derivedtable_dvdrental {

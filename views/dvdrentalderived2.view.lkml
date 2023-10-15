@@ -3,6 +3,8 @@
 
 view: dvdrentalderived2 {
   derived_table: {
+    interval_trigger: "5 minutes"
+    indexes: ["actor_id","film_id"]
     explore_source: film_actor {
       column: first_name { field: actor.first_name }
       column: actor_id { field: actor.actor_id }
@@ -29,10 +31,19 @@ view: dvdrentalderived2 {
       column: name { field: language.name }
       column: language_id { field: language.language_id }
       column: count { field: language.count }
+      derived_column: id {
+        sql:  actor_id + film_id ;;
+      }
     }
   }
+  dimension: id {
+    description: ""
+    primary_key: yes
+  }
+
   dimension: first_name {
     description: ""
+
   }
   dimension: actor_id {
     description: ""
